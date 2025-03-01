@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí</title>
+    <link rel="icon" type="image/x-icon" href="LogoTuTU.ico">
+    <style>
+        /* Estilos generales */
+        
+        body {
+            background-color: #0d0d0d;
+            color: #00ffcc;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow-x: hidden;
+        }
+        /* Efecto de glitch en el título */
+        
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+            }
+            50% {
+                text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff;
+            }
+            100% {
+                text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+            }
+        }
+        
+        h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            animation: glitch 0.7s infinite alternate;
+        }
+        /* Animación de aparición */
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Estilos del párrafo */
+        
+        p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+            padding: 20px;
+            border-left: 5px solid #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
+            background: rgba(0, 255, 204, 0.1);
+            text-align: justify;
+        }
+        /* Estilos para el personaje virtual */
+        
+        .character-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .character-container.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .character {
+            width: 150px;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .character img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .character-message {
+            position: absolute;
+            bottom: 160px;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ffcc;
+            /* Color neón */
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border: 2px solid #00ffcc;
+            /* Borde neón */
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            /* Sombra neón */
+            animation: neonGlow 1.5s infinite alternate;
+            /* Efecto de brillo */
+        }
+        
+        @keyframes neonGlow {
+            0% {
+                box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+            }
+            50% {
+                box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+            }
+            100% {
+                box-shadow: 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+            }
+        }
+        
+        .character-container.active .character-message {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Personaje virtual -->
+    <div class="character-container">
+        <div class="character">
+            <img src="virtual.jpg" alt="Personaje Virtual">
+        </div>
+        <div class="character-message">
+            En esta parte te mostrare como mi creador empezo en lo de la programacion.
+        </div>
+    </div>
+
+    <h1 class="fade-in">Sobre mí</h1>
+    <p class="fade-in">
+        Hola primeramente, mi nombre es <strong>Sandy Baez</strong>, un chico de 17 años que se ha interesado en la <strong>tecnología</strong>, el <strong>desarrollo web</strong> y de <strong>apps</strong>. Desde hace unos años me gusta la tecnología
+        y hacer cosas nuevas. Te contaré cómo empecé en esto de la programación. Todo empezó en <strong>septiembre de 2024</strong>. En ese entonces no sabía casi nada sobre programación, así que decidí investigar más a fondo sobre este mundo. Dentro
+        de la información que había recolectado, me interesé más y más, y ahí fue donde empezó todo. Investigué cuál era el lenguaje más cómodo y didáctico para empezar a programar. Vi que era <strong>Python</strong>, aunque muchas personas prefieren
+        empezar con <strong>C</strong> o <strong>JavaScript</strong>, pero a mí me gustó <strong>Python</strong> por su forma de programación didáctica y sencilla.
+    </p>
+
+    <p class="fade-in">
+        Después fui a otro lenguaje llamado <strong>HTML</strong>. Ahí creé mi primera página, la cual puedes ver en mi portafolio en forma de video. Después de haber dominado más y conocido a fondo el lenguaje de <strong>HTML</strong>, le agregué el
+        lenguaje de <strong>CSS</strong>, que sirve para alinear los textos, añadir animaciones super bonitas y animaciones a botones. Puedes crear un <strong>login</strong> donde las personas puedan iniciar sesión en tu página. En fin, hay muchas cosas
+        que puedes hacer con <strong>CSS</strong> en conjunto con <strong>HTML</strong>. Por ejemplo, los iconos de mis redes sociales los pude agregar justo donde quería mediante <strong>CSS</strong>, y utilicé <strong>HTML</strong> para agregarlos.
+        Hay muchas cosas que puedes hacer combinando estos dos lenguajes.
+    </p>
+
+    <p class="fade-in">
+        Después de dominar estos dos lenguajes, decidí aprender <strong>JavaScript</strong>. Es un lenguaje de programación interpretado a objetos y principalmente conocido por su uso en el desarrollo web. Con este lenguaje no llevo tanto tiempo, pero
+        en lo que he podido investigar, es muy necesario en la creación de páginas web porque con él puedes hacer muchas cosas, como poner <strong>partículas en el fondo</strong> de tu página de <strong>HTML</strong>. En mi portafolio hay un ejemplo de
+        lo que me refiero. En fin, la programación es algo muy hermoso, ¿verdad? Lo que quiero dejar dicho con esto es que, si estás interesado en estudiar o investigar sobre este mundo, te motivo a que lo hagas, porque en serio te va a gustar. Muchas
+        Gracias por visitar mi pagina web y darte el tiempo de leer todo esto.
+    </p>
+
+    <script>
+        // Animación al hacer scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+
+        // Animación del personaje virtual
+        const characterContainer = document.querySelector(".character-container");
+        const characterMessage = document.querySelector(".character-message");
+
+        // Mostrar el personaje después de 1 segundo
+        setTimeout(() => {
+            characterContainer.classList.add("active");
+        }, 1000);
+
+        // Mostrar el mensaje después de 2 segundos
+        setTimeout(() => {
+            characterMessage.style.opacity = 1;
+        }, 2000);
+
+        // Desaparecer el personaje después de 5 segundos
+        setTimeout(() => {
+            characterContainer.classList.remove("active");
+            characterContainer.style.opacity = 0;
+            characterContainer.style.transform = "translateY(100%)";
+        }, 5000);
+    </script>
+</body>
+
+</html>
